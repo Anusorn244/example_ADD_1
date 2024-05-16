@@ -1,38 +1,34 @@
-import 'package:example_1/screen/my_second_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  get navigator => MySecondPage();
+class MySecondPage extends StatelessWidget {
+  const MySecondPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(child: Text("NU")),
+      drawer: const Drawer(child: Text("NU2")),
       appBar: AppBar(
         title: Text(
-          "MYHomePageNU",
+          "MYSecongPageNU",
           style: TextStyle(
-            fontSize: 20,
-            color: Colors.lightGreen,
+            fontSize: 40,
+            color: Colors.green,
           ),
         ),
       ),
       body: Center(
           child: Column(
         children: [
-          const Text("Hi DOO"),
+          const Text("Hi BOO"),
           ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
+                Navigator.pop(context,
                     MaterialPageRoute(builder: (context) => MySecondPage()));
               },
-              child: Text("ไปยังหน้าสอง")),
+              child: Text("กลับสิ")),
         ],
       )),
     );
   }
 }
-
-class TeXT {}
